@@ -20,6 +20,16 @@
 	<developers>
 		<developer/>
 	</developers>
+
+	<distributionManagement>
+  	<repository>
+    <id>github</id>
+    <name>GitHub Maven Packages</name>
+    <url>https://maven.pkg.github.com/santonu91/springboot_demo_001</url>
+    </repository>
+    </distributionManagement>
+
+	
 	<scm>
 		<connection/>
 		<developerConnection/>

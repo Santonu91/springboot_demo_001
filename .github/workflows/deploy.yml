@@ -19,7 +19,7 @@ jobs:
         run: |
           ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
             echo "Downloading JAR from S3..."
-            aws s3 cp s3://${{ secrets.S3_BUCKET }}/deploy/ demo-0.0.1-SNAPSHOT.jar --region ${{ secrets.AWS_REGION }}
+            aws s3 cp s3://${{ secrets.S3_BUCKET }}/deploy/demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar --region ${{ secrets.AWS_REGION }}
 
             echo "Killing any existing Java app..."
             pkill -f 'java -jar' || true
